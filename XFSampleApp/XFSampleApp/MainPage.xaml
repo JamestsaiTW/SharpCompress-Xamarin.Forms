@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFSampleApp.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XFSampleApp">
+
+    <StackLayout>
+        <!--  Place new controls here  -->
+        <Label
+            x:Name="DisplayLabel"
+            HorizontalOptions="Center"
+            Text="Welcome to Xamarin.Forms!"
+            VerticalOptions="CenterAndExpand" />
+        <Button Clicked="MyButton_Clicked" Text="Zip" />
+        <Button Clicked="MyButtonWithPwd_Clicked" Text="Zip with password" />
+        <Button Clicked="MyButton_Clicked" Text="Rar" />
+        <Button Clicked="MyButtonWithPwd_Clicked" Text="Rar with password" />
+    </StackLayout>
+
+</ContentPage>
