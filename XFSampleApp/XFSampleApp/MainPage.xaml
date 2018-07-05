@@ -4,18 +4,62 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:XFSampleApp">
+    <!--  Place new controls here  -->
+    <Grid>
+        <StackLayout>
+            <Label
+                x:Name="DisplayLabel"
+                HorizontalOptions="Center"
+                Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" />
+            <Button Clicked="MyButton_Clicked" Text="Zip" />
+            <Button Clicked="MyButtonWithPwd_Clicked" Text="Zip with password" />
+            <Button Clicked="MyButton_Clicked" Text="Rar" />
+            <Button Clicked="MyButtonWithPwd_Clicked" Text="Rar with password" />
+        </StackLayout>
+        <Grid
+            BackgroundColor="White"
+            IsVisible="{Binding IsNeedPassword}"
+            Opacity="0.8"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <StackLayout
+                Grid.Row="1"
+                Margin="10,10"
+                BackgroundColor="Black">
+                <Label
+                    Margin="0,10"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="解壓縮時必要填入的資訊"
+                    TextColor="White" />
+                <Entry
+                    BackgroundColor="White" 
+                    x:Name="PasswordEntry"
+                    Margin="10,0"
+                    IsPassword="True"
+                    Placeholder="請在此輸入解壓縮密碼"
+                    PlaceholderColor="White"
+                    TextColor="White">
+                    <Entry.TextColor>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS">Black</On>
+                        </OnPlatform>
+                    </Entry.TextColor>
+                    <Entry.PlaceholderColor>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS">Black</On>
+                        </OnPlatform>
+                    </Entry.PlaceholderColor>
+                </Entry>
 
-    <StackLayout>
-        <!--  Place new controls here  -->
-        <Label
-            x:Name="DisplayLabel"
-            HorizontalOptions="Center"
-            Text="Welcome to Xamarin.Forms!"
-            VerticalOptions="CenterAndExpand" />
-        <Button Clicked="MyButton_Clicked" Text="Zip" />
-        <Button Clicked="MyButtonWithPwd_Clicked" Text="Zip with password" />
-        <Button Clicked="MyButton_Clicked" Text="Rar" />
-        <Button Clicked="MyButtonWithPwd_Clicked" Text="Rar with password" />
-    </StackLayout>
-
+                <Button Clicked="PasswordButtonDone_Clicked" Text="完成" />
+                <Button Clicked="PasswordButtonCancel_Clicked" Text="取消" />
+            </StackLayout>
+        </Grid>
+    </Grid>
 </ContentPage>

@@ -10,7 +10,7 @@
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>XFSampleApp.iOS</RootNamespace>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <IPhoneResourcePrefix>Resources;Resources\localdemofiles</IPhoneResourcePrefix>
     <AssemblyName>XFSampleApp.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -94,6 +94,10 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\localdemofiles\TestRarFile.rar" />
+    <BundleResource Include="Resources\localdemofiles\TestRarFile_withPWD.rar" />
+    <BundleResource Include="Resources\localdemofiles\TestZipFile.zip" />
+    <BundleResource Include="Resources\localdemofiles\TestZipFile_withPWD.zip" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
