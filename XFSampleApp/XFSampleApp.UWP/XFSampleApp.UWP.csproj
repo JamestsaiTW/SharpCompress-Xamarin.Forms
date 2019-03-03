@@ -144,13 +144,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LiveXAML">
-      <Version>2.1.36</Version>
+      <Version>2.1.70</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
-      <Version>0.8.0-preview</Version>
+      <Version>1.0.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.583944" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5" />
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.9" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XFSampleApp\XFSampleApp.csproj">
